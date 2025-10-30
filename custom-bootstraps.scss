@@ -1,0 +1,100 @@
+//genero stili personalizzati per bootstrap
+
+@import "./scss/functions";
+@import "./scss/variables";
+
+//bordi personalizzati
+
+$new-bordo-6: 6px;
+$new-bordo-7: 7px;
+$new-bordo-8: 8px;
+$new-bordo-9: 9px;
+$new-bordo-10: 10px;
+
+$new-bordo-value: (
+  6: $new-bordo-6,
+  7: $new-bordo-7,
+  8: $new-bordo-8,
+  9: $new-bordo-9,
+  10: $new-bordo-10,
+);
+
+$border-widths: map-merge($border-widths, $new-bordo-value);
+
+//font size personalizzati
+
+
+$new-size-7: 0.5;
+$new-size-8: 0.7;
+$new-size-9: 0.8;
+$new-size-10: 0.9;
+
+$new-size-value: (
+  
+  7: $new-size-7,
+  8: $new-size-8,
+  9: $new-size-9,
+  10: $new-size-10,
+);
+
+
+$font-sizes: map-merge($font-sizes, $new-size-value);
+
+//personalizzo gutter
+$grid-gutter-width:           0.5rem;
+//personalizzo padding bottoni input
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+
+//personalizzo colori 
+$epicode-1: #5726c3;
+$epicode-2: #8625a5;
+$epicode-3: #cb2376;
+$new_info:  #00ffea;
+$new_danger: #ff0077;
+$new_light: #f3eeff;
+
+$new_theme-colors: (
+    "info": $new_info,
+    "danger": $new_danger,
+    "light": $new_light,
+    "epicode-1": $epicode-1,
+    "epicode-2": $epicode-2,
+    "epicode-3": $epicode-3,
+);
+$theme-colors: map-merge($theme-colors, $new_theme-colors);
+
+//personalizzo border-radius
+$border-radius: 1.5rem;
+
+
+//personalizzo card
+$card-bg:  $dark;
+$card-color:  $new-info;
+$card-border-radius:  2rem;
+
+//aggiungo nuovi breakpoint
+
+$new_3xl: 1600px;
+$new_4xl: 1800px;
+
+$new-grid-breakpoints: (
+    3xl: $new_3xl,
+    4xl: $new_4xl,
+);
+
+$grid-breakpoints: map-merge(
+  $grid-breakpoints,
+  $new-grid-breakpoints
+);
+
+$container-max-widths: map-merge(
+  $container-max-widths,
+  (
+    3xl: 1520px,
+    4xl: 1720px,
+  )
+);
+
+@import "./scss/bootstrap.scss";    
